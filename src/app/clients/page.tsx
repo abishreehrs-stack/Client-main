@@ -193,38 +193,38 @@ export default function ClientsPage() {
           GLOBAL PARTNERSHIPS • 250+ ENTERPRISES • PAN-INDIA ECOSYSTEM
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6 flex flex-col items-center text-center">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
           
-          <div className="inline-flex items-center gap-2 bg-surface/90 backdrop-blur-md border border-glass-border px-4 py-2 rounded-full shadow-sm mb-6">
-            <span className="material-symbols-outlined text-primary text-[20px]">verified</span>
-            <span className="text-xs font-extrabold text-primary uppercase tracking-widest">Enterprise Client Ecosystem</span>
+          <div className="inline-flex items-center gap-2 bg-surface/90 backdrop-blur-md border border-glass-border px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-sm mb-4 sm:mb-6">
+            <span className="material-symbols-outlined text-primary text-[18px] sm:text-[20px]">verified</span>
+            <span className="text-[10px] sm:text-xs font-extrabold text-primary uppercase tracking-widest">Enterprise Client Ecosystem</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-on-surface tracking-tight max-w-4xl leading-[1.15] mb-6">
+          <h1 className="text-2xl sm:text-4xl md:text-6xl font-extrabold text-on-surface tracking-tight max-w-4xl leading-[1.18] sm:leading-[1.15] mb-4 sm:mb-6">
             Trusted by Industry Leaders Across <span className="text-primary">18+ Sectors</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed mb-10">
+          <p className="text-xs sm:text-base md:text-lg text-on-surface-variant max-w-2xl leading-relaxed mb-8 sm:mb-10">
             From high-growth tech unicorns and fintech pioneers to healthcare conglomerates and logistics giants, discover how we fuel sustainable enterprise growth.
           </p>
 
           {/* Stats Bar */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full max-w-4xl">
-            <div className="glass-card rounded-2xl p-5 text-center shadow-md">
-              <div className="text-2xl sm:text-3xl font-black text-primary mb-1">250+</div>
-              <div className="text-xs text-on-surface-variant font-bold uppercase tracking-wider">Corporate Clients</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 w-full max-w-4xl">
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
+              <div className="text-xl sm:text-3xl font-black text-primary mb-0.5 sm:mb-1">250+</div>
+              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Corporate Clients</div>
             </div>
-            <div className="glass-card rounded-2xl p-5 text-center shadow-md">
-              <div className="text-2xl sm:text-3xl font-black text-secondary mb-1">10,000+</div>
-              <div className="text-xs text-on-surface-variant font-bold uppercase tracking-wider">Talent Placed</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
+              <div className="text-xl sm:text-3xl font-black text-secondary mb-0.5 sm:mb-1">10,000+</div>
+              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Talent Placed</div>
             </div>
-            <div className="glass-card rounded-2xl p-5 text-center shadow-md">
-              <div className="text-2xl sm:text-3xl font-black text-tertiary mb-1">98.4%</div>
-              <div className="text-xs text-on-surface-variant font-bold uppercase tracking-wider">Client Retention</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
+              <div className="text-xl sm:text-3xl font-black text-tertiary mb-0.5 sm:mb-1">98.4%</div>
+              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Client Retention</div>
             </div>
-            <div className="glass-card rounded-2xl p-5 text-center shadow-md">
-              <div className="text-2xl sm:text-3xl font-black text-quaternary mb-1">18+</div>
-              <div className="text-xs text-on-surface-variant font-bold uppercase tracking-wider">Industry Verticals</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
+              <div className="text-xl sm:text-3xl font-black text-quaternary mb-0.5 sm:mb-1">18+</div>
+              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Industry Verticals</div>
             </div>
           </div>
 
@@ -232,37 +232,37 @@ export default function ClientsPage() {
       </section>
 
       {/* ---------------- 2. PARTNER ECOSYSTEM & SECTOR TABS ---------------- */}
-      <section className="relative py-20 bg-surface transition-colors duration-300 overflow-hidden">
+      <section className="relative py-14 sm:py-20 bg-surface transition-colors duration-300 overflow-hidden">
         {/* Ambient Typographic Watermark */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden flex items-center justify-center z-0 opacity-[0.02] dark:opacity-[0.04] text-[8vw] font-black uppercase tracking-[0.2em] whitespace-nowrap text-on-surface">
           INDUSTRY LEADERSHIP • RETENTION • GOVERNANCE
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6 flex flex-col gap-12">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6 flex flex-col gap-8 sm:gap-12">
           
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6">
             <div>
-              <span className="text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-2">Our Network</span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface">
+              <span className="text-[10px] sm:text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-1.5 sm:mb-2">Our Network</span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-on-surface tracking-tight leading-snug">
                 Featured Client <span className="text-primary">Partnerships</span>
               </h2>
             </div>
 
-            {/* Sector Tabs */}
-            <div className="flex items-center gap-2 flex-wrap">
+            {/* Sector Tabs (Scrollable on mobile) */}
+            <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto touch-scroll no-scrollbar py-1">
               {sectors.map((sec) => {
                 const isActive = activeSector === sec.id;
                 return (
                   <button
                     key={sec.id}
                     onClick={() => setActiveSector(sec.id)}
-                    className={`cursor-pointer inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-extrabold transition-all border ${
+                    className={`cursor-pointer inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-extrabold transition-all border shrink-0 ${
                       isActive
                         ? 'bg-primary text-on-primary border-primary shadow-md'
                         : 'glass-card text-on-surface-variant hover:text-primary hover:border-primary'
                     }`}
                   >
-                    <span className="material-symbols-outlined text-[16px]">{sec.icon}</span>
+                    <span className="material-symbols-outlined text-[15px] sm:text-[16px]">{sec.icon}</span>
                     <span>{sec.label}</span>
                   </button>
                 );
@@ -271,24 +271,24 @@ export default function ClientsPage() {
           </div>
 
           {/* Partner Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {filteredPartners.map((partner) => (
               <div 
                 key={partner.id} 
-                className="glass-card rounded-3xl p-6 flex flex-col justify-between group shadow-md border border-glass-border hover:-translate-y-1 transition-all"
+                className="glass-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between group shadow-md border border-glass-border hover:-translate-y-1 transition-all"
               >
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3 sm:gap-4">
                   <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-2xl bg-primary/10 border border-glass-border flex items-center justify-center font-black text-primary text-sm tracking-wider">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-primary/10 border border-glass-border flex items-center justify-center font-black text-primary text-xs sm:text-sm tracking-wider">
                       {partner.logoText}
                     </div>
-                    <span className="text-[11px] font-bold text-secondary px-2.5 py-1 rounded-full bg-secondary/10 border border-glass-border">
+                    <span className="text-[10px] sm:text-[11px] font-bold text-secondary px-2.5 py-0.5 sm:py-1 rounded-full bg-secondary/10 border border-glass-border">
                       {partner.sector}
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-extrabold text-on-surface group-hover:text-primary transition-colors">
+                    <h3 className="text-base sm:text-lg font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug">
                       {partner.name}
                     </h3>
                     <div className="text-xs text-on-surface-variant flex items-center gap-1 mt-0.5">
@@ -298,12 +298,12 @@ export default function ClientsPage() {
                   </div>
 
                   <div className="p-3 rounded-2xl bg-surface-container/50 text-xs">
-                    <div className="font-extrabold text-primary mb-1">{partner.placements}</div>
+                    <div className="font-extrabold text-primary mb-0.5">{partner.placements}</div>
                     <div className="text-on-surface-variant line-clamp-2 leading-relaxed">{partner.focus}</div>
                   </div>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-glass-border text-[11px] font-semibold text-on-surface-variant">
+                <div className="pt-3.5 sm:pt-4 mt-3 sm:mt-4 border-t border-glass-border text-[10px] sm:text-[11px] font-semibold text-on-surface-variant">
                   {partner.relationship}
                 </div>
               </div>
@@ -315,7 +315,7 @@ export default function ClientsPage() {
 
       {/* ---------------- 3. EXECUTIVE CASE STUDIES ---------------- */}
       <section 
-        className="relative py-24 border-t border-glass-border transition-colors duration-500 overflow-hidden"
+        className="relative py-14 sm:py-24 border-t border-glass-border transition-colors duration-500 overflow-hidden"
         style={{ background: 'var(--section-gradient-2)' }}
       >
         {/* Ambient Typographic Watermark */}
@@ -323,31 +323,31 @@ export default function ClientsPage() {
           CASE STUDIES • IMPACT • RETENTION • METRICS
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6 flex flex-col gap-12">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6 flex flex-col gap-8 sm:gap-12">
           
           <div className="text-center max-w-2xl mx-auto">
-            <span className="text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-2">Proven Impact</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight">
+            <span className="text-[10px] sm:text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-1.5 sm:mb-2">Proven Impact</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-on-surface tracking-tight leading-snug">
               Executive Client <span className="text-primary">Case Studies</span>
             </h2>
-            <p className="text-sm sm:text-base text-on-surface-variant mt-2">
+            <p className="text-xs sm:text-base text-on-surface-variant mt-1.5 sm:mt-2">
               Real-world talent bottlenecks solved with precision executive search and compliance frameworks.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {caseStudies.map((cs) => (
-              <div key={cs.id} className="glass-card rounded-3xl p-8 flex flex-col justify-between group shadow-lg border border-glass-border">
-                <div className="flex flex-col gap-5">
+              <div key={cs.id} className="glass-card rounded-3xl p-5 sm:p-8 flex flex-col justify-between group shadow-lg border border-glass-border">
+                <div className="flex flex-col gap-4 sm:gap-5">
                   <div>
-                    <div className="text-xs font-extrabold text-secondary uppercase tracking-wider mb-1">{cs.sector}</div>
-                    <h3 className="text-xl font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                    <div className="text-[11px] sm:text-xs font-extrabold text-secondary uppercase tracking-wider mb-1">{cs.sector}</div>
+                    <h3 className="text-lg sm:text-xl font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug">
                       {cs.title}
                     </h3>
                     <div className="text-xs font-bold text-primary mt-1">Client: {cs.client}</div>
                   </div>
 
-                  <div className="flex flex-col gap-3 text-xs leading-relaxed">
+                  <div className="flex flex-col gap-2.5 sm:gap-3 text-xs leading-relaxed">
                     <div className="p-3 rounded-2xl bg-surface-container/60">
                       <span className="font-extrabold text-tertiary block mb-1 uppercase tracking-wider">The Challenge</span>
                       <p className="text-on-surface-variant">{cs.challenge}</p>
@@ -372,28 +372,28 @@ export default function ClientsPage() {
       </section>
 
       {/* ---------------- 4. EXECUTIVE TESTIMONIALS ---------------- */}
-      <section className="relative py-24 bg-surface border-t border-glass-border transition-colors duration-300 overflow-hidden">
+      <section className="relative py-14 sm:py-24 bg-surface border-t border-glass-border transition-colors duration-300 overflow-hidden">
         {/* Ambient Typographic Watermark */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden flex items-center justify-center z-0 opacity-[0.025] dark:opacity-[0.04] text-[8vw] font-black uppercase tracking-[0.2em] whitespace-nowrap text-on-surface">
           CLIENT TRUST • 98.4% RETENTION • EXECUTIVE ENDORSEMENTS
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6 flex flex-col gap-12">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6 flex flex-col gap-8 sm:gap-12">
           
           <div className="text-center max-w-2xl mx-auto">
-            <span className="text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-2">Client Testimonials</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight">
+            <span className="text-[10px] sm:text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-1.5 sm:mb-2">Client Testimonials</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-on-surface tracking-tight leading-snug">
               What Corporate Leaders <span className="text-primary">Say About Us</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {testimonials.map((t, idx) => (
-              <div key={idx} className="glass-card rounded-3xl p-7 flex flex-col justify-between group shadow-md border border-glass-border">
-                <div className="flex flex-col gap-4">
+              <div key={idx} className="glass-card rounded-3xl p-5 sm:p-7 flex flex-col justify-between group shadow-md border border-glass-border">
+                <div className="flex flex-col gap-3 sm:gap-4">
                   <div className="flex items-center gap-1 text-amber-500">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="material-symbols-outlined text-[20px]">star</span>
+                      <span key={i} className="material-symbols-outlined text-[18px] sm:text-[20px]">star</span>
                     ))}
                   </div>
 
@@ -402,16 +402,16 @@ export default function ClientsPage() {
                   </blockquote>
                 </div>
 
-                <div className="flex items-center gap-3 pt-5 mt-5 border-t border-glass-border">
+                <div className="flex items-center gap-3 pt-4 sm:pt-5 mt-4 sm:mt-5 border-t border-glass-border">
                   <img 
                     src={t.image} 
                     alt={t.author} 
-                    className="w-12 h-12 rounded-full object-cover border-2 border-primary shadow-sm"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-primary shadow-sm"
                   />
                   <div>
                     <div className="text-xs font-extrabold text-on-surface">{t.author}</div>
-                    <div className="text-[11px] text-on-surface-variant font-medium">{t.role}</div>
-                    <div className="text-[11px] font-bold text-primary">{t.company}</div>
+                    <div className="text-[10px] sm:text-[11px] text-on-surface-variant font-medium">{t.role}</div>
+                    <div className="text-[10px] sm:text-[11px] font-bold text-primary">{t.company}</div>
                   </div>
                 </div>
               </div>
@@ -422,31 +422,31 @@ export default function ClientsPage() {
       </section>
 
       {/* ---------------- 5. PARTNERSHIP CTA BANNER ---------------- */}
-      <section className="relative py-20 bg-surface border-t border-glass-border overflow-hidden">
+      <section className="relative py-12 sm:py-20 bg-surface border-t border-glass-border overflow-hidden">
         {/* Ambient Typographic Watermark */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden flex items-center justify-center z-0 opacity-[0.02] dark:opacity-[0.04] text-[8vw] font-black uppercase tracking-[0.2em] whitespace-nowrap text-on-surface">
           SCALE YOUR WORKFORCE • MANDATES • RETENTION
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6">
           <div 
-            className="p-10 sm:p-14 rounded-3xl border border-glass-border shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden"
+            className="p-6 sm:p-14 rounded-3xl border border-glass-border shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 relative overflow-hidden"
             style={{ background: 'var(--banner-gradient)' }}
           >
-            <div className="flex flex-col gap-3 text-center md:text-left z-10">
-              <span className="text-xs font-extrabold text-tertiary uppercase tracking-widest">Enterprise Talent Solutions</span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight">
+            <div className="flex flex-col gap-2.5 sm:gap-3 text-center md:text-left z-10">
+              <span className="text-[10px] sm:text-xs font-extrabold text-tertiary uppercase tracking-widest">Enterprise Talent Solutions</span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-on-surface tracking-tight leading-snug">
                 Ready to Join Our Client Partner Network?
               </h2>
-              <p className="text-sm sm:text-base text-on-surface-variant max-w-xl">
+              <p className="text-xs sm:text-base text-on-surface-variant max-w-xl">
                 Experience accelerated C-suite search, vetted engineering squads, and risk-free statutory compliance.
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 z-10">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 z-10 w-full sm:w-auto">
               <Link 
                 href="/contact" 
-                className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-sm px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5"
+                className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-center active:scale-98"
               >
                 Inquire About Corporate Mandates
               </Link>

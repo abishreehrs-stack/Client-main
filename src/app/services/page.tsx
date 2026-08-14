@@ -190,38 +190,38 @@ export default function ServicesPage() {
           STRATEGY • COMPLIANCE • TALENT • LEADERSHIP
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6 flex flex-col items-center text-center">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
           
-          <div className="inline-flex items-center gap-2 bg-surface/90 backdrop-blur-md border border-glass-border px-4 py-2 rounded-full shadow-sm mb-6">
-            <span className="material-symbols-outlined text-primary text-[20px]">corporate_fare</span>
-            <span className="text-xs font-extrabold text-primary uppercase tracking-widest">Enterprise HR Solutions</span>
+          <div className="inline-flex items-center gap-2 bg-surface/90 backdrop-blur-md border border-glass-border px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-sm mb-4 sm:mb-6">
+            <span className="material-symbols-outlined text-primary text-[18px] sm:text-[20px]">corporate_fare</span>
+            <span className="text-[10px] sm:text-xs font-extrabold text-primary uppercase tracking-widest">Enterprise HR Solutions</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-on-surface tracking-tight max-w-4xl leading-[1.15] mb-6">
+          <h1 className="text-2xl sm:text-4xl md:text-6xl font-extrabold text-on-surface tracking-tight max-w-4xl leading-[1.18] sm:leading-[1.15] mb-4 sm:mb-6">
             Strategic Practice Areas Engineered for <span className="text-primary">Corporate Growth</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed mb-10">
+          <p className="text-xs sm:text-base md:text-lg text-on-surface-variant max-w-2xl leading-relaxed mb-8 sm:mb-10">
             From confidential C-suite executive headhunting and rapid technical team build-outs to statutory labor audits and strategic HR advisory frameworks.
           </p>
 
           {/* Key Metrics Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full max-w-4xl">
-            <div className="glass-card rounded-2xl p-5 text-center shadow-md">
-              <div className="text-2xl sm:text-3xl font-black text-primary mb-1">98.4%</div>
-              <div className="text-xs text-on-surface-variant font-bold uppercase tracking-wider">Placement Retention</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 w-full max-w-4xl">
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
+              <div className="text-xl sm:text-3xl font-black text-primary mb-0.5 sm:mb-1">98.4%</div>
+              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Placement Retention</div>
             </div>
-            <div className="glass-card rounded-2xl p-5 text-center shadow-md">
-              <div className="text-2xl sm:text-3xl font-black text-secondary mb-1">14 Days</div>
-              <div className="text-xs text-on-surface-variant font-bold uppercase tracking-wider">Avg Sourcing Speed</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
+              <div className="text-xl sm:text-3xl font-black text-secondary mb-0.5 sm:mb-1">14 Days</div>
+              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Avg Sourcing Speed</div>
             </div>
-            <div className="glass-card rounded-2xl p-5 text-center shadow-md">
-              <div className="text-2xl sm:text-3xl font-black text-tertiary mb-1">100%</div>
-              <div className="text-xs text-on-surface-variant font-bold uppercase tracking-wider">Statutory Safety</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
+              <div className="text-xl sm:text-3xl font-black text-tertiary mb-0.5 sm:mb-1">100%</div>
+              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Statutory Safety</div>
             </div>
-            <div className="glass-card rounded-2xl p-5 text-center shadow-md">
-              <div className="text-2xl sm:text-3xl font-black text-quaternary mb-1">500+</div>
-              <div className="text-xs text-on-surface-variant font-bold uppercase tracking-wider">Retained Mandates</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
+              <div className="text-xl sm:text-3xl font-black text-quaternary mb-0.5 sm:mb-1">500+</div>
+              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Retained Mandates</div>
             </div>
           </div>
 
@@ -229,29 +229,29 @@ export default function ServicesPage() {
       </section>
 
       {/* ---------------- 2. INTERACTIVE PRACTICE CATEGORY FILTER & SOLUTIONS ---------------- */}
-      <section className="relative py-20 bg-surface transition-colors duration-300 overflow-hidden">
+      <section className="relative py-14 sm:py-20 bg-surface transition-colors duration-300 overflow-hidden">
         {/* Ambient Typographic Watermark */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden flex items-center justify-center z-0 opacity-[0.02] dark:opacity-[0.04] text-[9vw] font-black uppercase tracking-[0.2em] whitespace-nowrap text-on-surface">
           EXCELLENCE • TALENT ECOSYSTEM • RETENTION
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6 flex flex-col gap-12">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6 flex flex-col gap-8 sm:gap-12">
           
-          {/* Category Pills Bar */}
-          <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
+          {/* Category Pills Bar (Scrollable on mobile) */}
+          <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto touch-scroll no-scrollbar py-1 w-full justify-start sm:justify-center">
             {categories.map((cat) => {
               const isActive = activeCategory === cat.id;
               return (
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`cursor-pointer inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-extrabold transition-all border ${
+                  className={`cursor-pointer inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-extrabold transition-all border shrink-0 ${
                     isActive
-                      ? 'bg-primary text-on-primary border-primary shadow-md scale-105'
+                      ? 'bg-primary text-on-primary border-primary shadow-md scale-102'
                       : 'glass-card text-on-surface-variant hover:text-primary hover:border-primary'
                   }`}
                 >
-                  <span className="material-symbols-outlined text-[18px]">{cat.icon}</span>
+                  <span className="material-symbols-outlined text-[16px] sm:text-[18px]">{cat.icon}</span>
                   <span>{cat.label}</span>
                 </button>
               );
@@ -259,14 +259,14 @@ export default function ServicesPage() {
           </div>
 
           {/* Practice Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {filteredServices.map((srv) => (
               <div 
                 key={srv.id} 
                 className="glass-card rounded-3xl overflow-hidden shadow-lg flex flex-col justify-between group border border-glass-border"
               >
                 {/* Visual Header with Real Pexels Photo */}
-                <div className="relative h-60 sm:h-64 overflow-hidden">
+                <div className="relative h-48 sm:h-64 overflow-hidden">
                   <img 
                     src={srv.image} 
                     alt={srv.title}
@@ -275,39 +275,39 @@ export default function ServicesPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent" />
                   
                   {/* Category Pill on top */}
-                  <div className="absolute top-5 left-5 inline-flex items-center gap-2 bg-surface/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-glass-border shadow-sm">
-                    <span className="material-symbols-outlined text-primary text-[18px]">{srv.icon}</span>
-                    <span className="text-xs font-extrabold text-primary uppercase tracking-wider">{srv.category}</span>
+                  <div className="absolute top-3.5 left-3.5 sm:top-5 sm:left-5 inline-flex items-center gap-1.5 sm:gap-2 bg-surface/90 backdrop-blur-md px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-glass-border shadow-sm">
+                    <span className="material-symbols-outlined text-primary text-[15px] sm:text-[18px]">{srv.icon}</span>
+                    <span className="text-[10px] sm:text-xs font-extrabold text-primary uppercase tracking-wider">{srv.category}</span>
                   </div>
 
                   {/* Stat Badge on top right */}
-                  <div className="absolute top-5 right-5 inline-flex items-center gap-1.5 bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-glass-border shadow-sm text-xs font-black text-secondary">
-                    <span className="material-symbols-outlined text-[16px]">verified</span>
+                  <div className="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 inline-flex items-center gap-1 bg-surface/90 backdrop-blur-md px-3 py-1 sm:px-3 sm:py-1.5 rounded-full border border-glass-border shadow-sm text-[10px] sm:text-xs font-black text-secondary">
+                    <span className="material-symbols-outlined text-[14px] sm:text-[16px]">verified</span>
                     <span>{srv.retentionRate}</span>
                   </div>
                 </div>
 
                 {/* Body Content */}
-                <div className="p-8 flex flex-col gap-6 flex-1 justify-between">
-                  <div className="flex flex-col gap-3">
-                    <h3 className="text-2xl font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                <div className="p-5 sm:p-8 flex flex-col gap-4 sm:gap-6 flex-1 justify-between">
+                  <div className="flex flex-col gap-2.5 sm:gap-3">
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug">
                       {srv.title}
                     </h3>
                     <p className="text-xs font-bold text-primary italic">
                       "{srv.tagline}"
                     </p>
-                    <p className="text-sm text-on-surface-variant leading-relaxed font-normal">
+                    <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed font-normal">
                       {srv.description}
                     </p>
 
                     {/* Key Deliverables Bullet Points */}
                     {srv.deliverables && srv.deliverables.length > 0 && (
-                      <div className="mt-2 pt-4 border-t border-glass-border flex flex-col gap-2">
-                        <span className="text-xs font-extrabold text-on-surface uppercase tracking-wider">Practice Deliverables:</span>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-on-surface font-semibold">
+                      <div className="mt-1 pt-3 sm:pt-4 border-t border-glass-border flex flex-col gap-2">
+                        <span className="text-[11px] sm:text-xs font-extrabold text-on-surface uppercase tracking-wider">Practice Deliverables:</span>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-xs text-on-surface font-semibold">
                           {srv.deliverables.map((item: string, idx: number) => (
                             <li key={idx} className="flex items-center gap-2">
-                              <span className="material-symbols-outlined text-primary text-[16px] shrink-0">check_circle</span>
+                              <span className="material-symbols-outlined text-primary text-[15px] shrink-0">check_circle</span>
                               <span>{item}</span>
                             </li>
                           ))}
@@ -317,15 +317,15 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Footer Action */}
-                  <div className="pt-5 border-t border-glass-border flex items-center justify-between">
+                  <div className="pt-4 sm:pt-5 border-t border-glass-border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="text-xs text-on-surface-variant flex items-center gap-1.5">
-                      <span className="material-symbols-outlined text-tertiary text-[18px]">timer</span>
+                      <span className="material-symbols-outlined text-tertiary text-[16px] sm:text-[18px]">timer</span>
                       <span>SLA: <strong>{srv.timeline}</strong></span>
                     </div>
 
                     <Link 
                       href="/contact" 
-                      className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-xs px-5 py-2.5 rounded-xl shadow transition-all flex items-center gap-1.5 group-hover:shadow-md"
+                      className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-xs px-5 py-3 rounded-xl shadow transition-all flex items-center justify-center gap-1.5 active:scale-98"
                     >
                       <span>Inquire Practice</span>
                       <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
@@ -342,7 +342,7 @@ export default function ServicesPage() {
 
       {/* ---------------- 3. THE 4-STEP RECRUITMENT & AUDIT METHODOLOGY ---------------- */}
       <section 
-        className="relative py-24 border-t border-glass-border transition-colors duration-500 overflow-hidden"
+        className="relative py-14 sm:py-24 border-t border-glass-border transition-colors duration-500 overflow-hidden"
         style={{ background: 'var(--section-gradient-2)' }}
       >
         {/* Background Image Layer */}
@@ -356,32 +356,32 @@ export default function ServicesPage() {
           METHODOLOGY • VETTING • CALIBRATION • ASSURANCE
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6 flex flex-col gap-12">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6 flex flex-col gap-8 sm:gap-12">
           
           <div className="text-center max-w-2xl mx-auto">
-            <span className="text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-2">Our Execution Rigor</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight">
+            <span className="text-[10px] sm:text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-1.5 sm:mb-2">Our Execution Rigor</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-on-surface tracking-tight leading-snug">
               The 4-Step Executive <span className="text-primary">Engagement Framework</span>
             </h2>
-            <p className="text-sm sm:text-base text-on-surface-variant mt-2">
+            <p className="text-xs sm:text-base text-on-surface-variant mt-1.5 sm:mt-2">
               Every mandate follows structured protocols guaranteeing speed, cultural alignment, and zero legal exposure.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {engagementSteps.map((step) => (
-              <div key={step.step} className="glass-card rounded-3xl p-6 flex flex-col justify-between group shadow-md border border-glass-border">
-                <div className="flex flex-col gap-4">
+              <div key={step.step} className="glass-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between group shadow-md border border-glass-border">
+                <div className="flex flex-col gap-3 sm:gap-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-3xl font-black text-primary/30 group-hover:text-primary transition-colors">
+                    <span className="text-2xl sm:text-3xl font-black text-primary/30 group-hover:text-primary transition-colors">
                       {step.step}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary border border-glass-border">
-                      <span className="material-symbols-outlined text-[20px]">{step.icon}</span>
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary border border-glass-border">
+                      <span className="material-symbols-outlined text-[18px] sm:text-[20px]">{step.icon}</span>
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  <h3 className="text-base sm:text-lg font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
                     {step.title}
                   </h3>
 
@@ -390,7 +390,7 @@ export default function ServicesPage() {
                   </p>
                 </div>
 
-                <div className="w-full h-1 bg-surface-container rounded-full overflow-hidden mt-6">
+                <div className="w-full h-1 bg-surface-container rounded-full overflow-hidden mt-4 sm:mt-6">
                   <div className="h-full bg-primary w-1/3 group-hover:w-full transition-all duration-500" />
                 </div>
               </div>
@@ -401,31 +401,31 @@ export default function ServicesPage() {
       </section>
 
       {/* ---------------- 4. STATUTORY COMPLIANCE ASSURANCE BANNER ---------------- */}
-      <section className="relative py-20 bg-surface border-t border-glass-border overflow-hidden">
+      <section className="relative py-12 sm:py-20 bg-surface border-t border-glass-border overflow-hidden">
         {/* Ambient Typographic Watermark */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden flex items-center justify-center z-0 opacity-[0.02] dark:opacity-[0.04] text-[8vw] font-black uppercase tracking-[0.2em] whitespace-nowrap text-on-surface">
           100% STATUTORY AUDIT • RISK MITIGATION
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6">
           <div 
-            className="p-10 sm:p-14 rounded-3xl border border-glass-border shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden"
+            className="p-6 sm:p-14 rounded-3xl border border-glass-border shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 relative overflow-hidden"
             style={{ background: 'var(--banner-gradient)' }}
           >
-            <div className="flex flex-col gap-3 text-center md:text-left z-10">
-              <span className="text-xs font-extrabold text-tertiary uppercase tracking-widest">Confidential Practice Advisory</span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight">
+            <div className="flex flex-col gap-2.5 sm:gap-3 text-center md:text-left z-10">
+              <span className="text-[10px] sm:text-xs font-extrabold text-tertiary uppercase tracking-widest">Confidential Practice Advisory</span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-on-surface tracking-tight leading-snug">
                 Need a Custom Mandate or Labor Law Audit?
               </h2>
-              <p className="text-sm sm:text-base text-on-surface-variant max-w-xl">
+              <p className="text-xs sm:text-base text-on-surface-variant max-w-xl">
                 Speak directly with our senior practice partners for confidential talent search or corporate statutory audits.
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 z-10">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 z-10 w-full sm:w-auto">
               <Link 
                 href="/contact" 
-                className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-sm px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5"
+                className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-center active:scale-98"
               >
                 Schedule Partner Consultation
               </Link>

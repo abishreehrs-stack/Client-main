@@ -256,7 +256,7 @@ export default function HomePage() {
       
       {/* ---------------- 1. ADOBE-INSPIRED ROUTER MARQUEE HERO ---------------- */}
       <section 
-        className="relative w-full min-h-[90vh] flex flex-col justify-between overflow-hidden pt-6 pb-8 transition-colors duration-500"
+        className="relative w-full min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-between overflow-hidden pt-3 sm:pt-6 pb-6 sm:pb-8 transition-colors duration-500"
         onMouseEnter={() => setIsHeroPaused(true)}
         onMouseLeave={() => setIsHeroPaused(false)}
       >
@@ -283,38 +283,38 @@ export default function HomePage() {
         />
 
         {/* Hero Content Area */}
-        <div className="relative z-10 max-w-container-max w-full mx-auto px-6 pt-12 sm:pt-16 pb-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-center flex-1">
-          <div className="col-span-1 md:col-span-8 flex flex-col items-start gap-6 animate-in fade-in duration-500">
+        <div className="relative z-10 max-w-container-max w-full mx-auto px-4 sm:px-6 pt-8 sm:pt-16 pb-6 sm:pb-8 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center flex-1">
+          <div className="col-span-1 md:col-span-8 flex flex-col items-start gap-4 sm:gap-6 animate-in fade-in duration-500">
             
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2.5 bg-surface-container/90 backdrop-blur-md border border-glass-border px-4 py-2 rounded-full shadow-sm">
-              <span className="material-symbols-outlined text-primary text-[20px]">{currentHero.tabIcon}</span>
-              <span className="font-extrabold text-xs text-primary uppercase tracking-wider">{currentHero.pill}</span>
+            <div className="inline-flex items-center gap-2 bg-surface-container/90 backdrop-blur-md border border-glass-border px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-sm">
+              <span className="material-symbols-outlined text-primary text-[18px] sm:text-[20px]">{currentHero.tabIcon}</span>
+              <span className="font-extrabold text-[11px] sm:text-xs text-primary uppercase tracking-wider">{currentHero.pill}</span>
             </div>
 
             {/* Display Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-on-surface leading-[1.12] tracking-tight transition-all duration-300">
+            <h1 className="text-2xl sm:text-4xl md:text-6xl font-extrabold text-on-surface leading-[1.18] sm:leading-[1.12] tracking-tight transition-all duration-300">
               {currentHero.headline.split('. ')[0]}.<br />
               <span className="text-primary">{currentHero.headline.split('. ')[1] || ''}</span>
             </h1>
 
             {/* Narrative Subtitle */}
-            <p className="text-base sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed font-normal">
+            <p className="text-sm sm:text-base md:text-lg text-on-surface-variant max-w-2xl leading-relaxed font-normal">
               {currentHero.description}
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto pt-1 sm:pt-2">
               <Link 
                 href={currentHero.primaryCtaHref} 
-                className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-sm px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 hover:shadow-xl flex items-center gap-2"
+                className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 hover:shadow-xl flex items-center justify-center gap-2 active:scale-98"
               >
                 <span>{currentHero.primaryCtaText}</span>
                 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
               </Link>
               <Link 
                 href={currentHero.secondaryCtaHref} 
-                className="cursor-pointer glass-card hover:border-primary text-on-surface hover:text-primary font-bold text-sm px-7 py-4 rounded-xl transition-all flex items-center gap-2"
+                className="cursor-pointer glass-card hover:border-primary text-on-surface hover:text-primary font-bold text-xs sm:text-sm px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl transition-all flex items-center justify-center gap-2 active:scale-98"
               >
                 <span>{currentHero.secondaryCtaText}</span>
                 <span className="material-symbols-outlined text-[18px]">explore</span>
@@ -322,38 +322,38 @@ export default function HomePage() {
             </div>
 
             {/* Floating Impact Metric Chip */}
-            <div className="inline-flex items-center gap-3 glass-card px-4 py-2 rounded-2xl shadow-sm mt-2">
-              <span className="text-xl font-black text-primary">{currentHero.badgeNum}</span>
-              <span className="text-xs text-on-surface-variant font-bold uppercase tracking-wider">{currentHero.badgeLabel}</span>
+            <div className="inline-flex items-center gap-2.5 sm:gap-3 glass-card px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-2xl shadow-sm mt-1 sm:mt-2">
+              <span className="text-lg sm:text-xl font-black text-primary">{currentHero.badgeNum}</span>
+              <span className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">{currentHero.badgeLabel}</span>
             </div>
 
           </div>
         </div>
 
         {/* Interactive Router Marquee Tab Navigation Bar */}
-        <div className="relative z-10 max-w-container-max w-full mx-auto px-6 mt-6">
-          <div className="glass-card rounded-2xl p-2 sm:p-3 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar shadow-lg">
+        <div className="relative z-10 max-w-container-max w-full mx-auto px-4 sm:px-6 mt-4 sm:mt-6">
+          <div className="glass-card rounded-2xl p-1.5 sm:p-3 flex items-center gap-2 overflow-x-auto touch-scroll no-scrollbar shadow-lg">
             {heroSlides.map((slide, idx) => {
               const isActive = idx === activeHeroTab;
               return (
                 <button
                   key={slide.id}
                   onClick={() => setActiveHeroTab(idx)}
-                  className={`cursor-pointer flex-1 min-w-[150px] sm:min-w-0 flex flex-col items-start p-3 rounded-xl transition-all duration-300 relative text-left group ${
+                  className={`cursor-pointer flex-1 min-w-[130px] sm:min-w-0 flex flex-col items-start p-2.5 sm:p-3 rounded-xl transition-all duration-300 relative text-left shrink-0 sm:shrink group ${
                     isActive 
                       ? 'bg-surface shadow-md' 
                       : 'hover:bg-surface-container/60 opacity-80 hover:opacity-100'
                   }`}
                 >
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className={`material-symbols-outlined text-[18px] ${isActive ? 'text-primary' : 'text-on-surface-variant'}`}>
+                  <div className="flex items-center gap-1.5 sm:gap-2 mb-0.5 sm:mb-1">
+                    <span className={`material-symbols-outlined text-[16px] sm:text-[18px] ${isActive ? 'text-primary' : 'text-on-surface-variant'}`}>
                       {slide.tabIcon}
                     </span>
-                    <span className={`text-xs font-extrabold truncate ${isActive ? 'text-primary' : 'text-on-surface'}`}>
+                    <span className={`text-[11px] sm:text-xs font-extrabold truncate ${isActive ? 'text-primary' : 'text-on-surface'}`}>
                       {slide.tabLabel}
                     </span>
                   </div>
-                  <span className="text-[10px] text-on-surface-variant line-clamp-1 font-medium hidden sm:block">
+                  <span className="text-[9px] sm:text-[10px] text-on-surface-variant line-clamp-1 font-medium hidden sm:block">
                     {slide.pill}
                   </span>
 
@@ -374,47 +374,47 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 2. ELASTIC GLIDING PICTURE CAROUSEL (PRACTICE AREAS) ---------------- */}
-      <section className="relative py-24 transition-colors duration-500 overflow-hidden" style={{ background: 'var(--section-gradient-1)' }}>
+      <section className="relative py-14 sm:py-24 transition-colors duration-500 overflow-hidden" style={{ background: 'var(--section-gradient-1)' }}>
         
         {/* Ambient Typographic Watermark */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden flex items-center justify-center z-0 opacity-[0.02] dark:opacity-[0.04] text-[9vw] font-black uppercase tracking-[0.2em] whitespace-nowrap text-on-surface">
           PRACTICE CAPABILITIES • SEARCH • COMPLIANCE • ADVISORY
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6">
           
           {/* Header with Navigation Controls */}
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-4 sm:gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-tertiary mb-2">
+              <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-tertiary mb-1.5 sm:mb-2">
                 <span className="w-2 h-2 rounded-full bg-tertiary" />
                 <span>End-to-End Capabilities</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-on-surface tracking-tight leading-snug">
                 Everything You Need for <span className="text-primary">Talent & HR</span>
               </h2>
-              <p className="text-sm sm:text-base text-on-surface-variant max-w-xl mt-2 leading-relaxed">
+              <p className="text-xs sm:text-base text-on-surface-variant max-w-xl mt-1.5 sm:mt-2 leading-relaxed">
                 Explore our full suite of executive search, technical staffing, and statutory labor compliance solutions.
               </p>
             </div>
 
             {/* Slider Arrow Controls */}
-            <div className="flex items-center gap-3 self-end sm:self-auto">
+            <div className="flex items-center gap-2.5 self-start sm:self-auto">
               <button
                 onClick={slideLeft}
                 disabled={carouselIndex === 0}
                 aria-label="Previous Slide"
-                className="cursor-pointer w-12 h-12 rounded-full glass-card flex items-center justify-center text-on-surface hover:text-primary disabled:opacity-40 transition-all shadow-sm active:scale-95"
+                className="cursor-pointer w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-card flex items-center justify-center text-on-surface hover:text-primary disabled:opacity-40 transition-all shadow-sm active:scale-95 min-w-[40px] min-h-[40px]"
               >
-                <span className="material-symbols-outlined text-[24px]">chevron_left</span>
+                <span className="material-symbols-outlined text-[20px] sm:text-[24px]">chevron_left</span>
               </button>
               <button
                 onClick={slideRight}
                 disabled={carouselIndex >= elasticPracticeCards.length - 2}
                 aria-label="Next Slide"
-                className="cursor-pointer w-12 h-12 rounded-full glass-card flex items-center justify-center text-on-surface hover:text-primary disabled:opacity-40 transition-all shadow-sm active:scale-95"
+                className="cursor-pointer w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-card flex items-center justify-center text-on-surface hover:text-primary disabled:opacity-40 transition-all shadow-sm active:scale-95 min-w-[40px] min-h-[40px]"
               >
-                <span className="material-symbols-outlined text-[24px]">chevron_right</span>
+                <span className="material-symbols-outlined text-[20px] sm:text-[24px]">chevron_right</span>
               </button>
             </div>
           </div>
@@ -423,52 +423,52 @@ export default function HomePage() {
           <div className="overflow-hidden">
             <div 
               ref={carouselTrackRef}
-              className="flex gap-6 transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${carouselIndex * 340}px)` }}
+              className="flex gap-4 sm:gap-6 transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${carouselIndex * (typeof window !== 'undefined' && window.innerWidth < 640 ? 290 : 360)}px)` }}
             >
               {elasticPracticeCards.map((card) => (
                 <div 
                   key={card.id}
-                  className="w-[320px] sm:w-[380px] shrink-0 glass-card rounded-3xl overflow-hidden flex flex-col justify-between group shadow-lg"
+                  className="w-[280px] xs:w-[320px] sm:w-[380px] shrink-0 glass-card rounded-3xl overflow-hidden flex flex-col justify-between group shadow-lg"
                 >
                   {/* Picture Glider Image Box */}
-                  <div className="relative h-48 sm:h-56 overflow-hidden">
+                  <div className="relative h-44 sm:h-56 overflow-hidden">
                     <img 
                       src={card.image} 
                       alt={card.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
-                    <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full border border-glass-border shadow-sm">
-                      <span className="material-symbols-outlined text-primary text-[16px]">{card.icon}</span>
-                      <span className="text-[11px] font-extrabold text-primary uppercase tracking-wider">{card.tag}</span>
+                    <div className="absolute top-3.5 left-3.5 inline-flex items-center gap-1.5 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full border border-glass-border shadow-sm">
+                      <span className="material-symbols-outlined text-primary text-[15px]">{card.icon}</span>
+                      <span className="text-[10px] sm:text-[11px] font-extrabold text-primary uppercase tracking-wider">{card.tag}</span>
                     </div>
                   </div>
 
                   {/* Card Content */}
-                  <div className="p-6 flex flex-col gap-3 flex-1 justify-between">
+                  <div className="p-4 sm:p-6 flex flex-col gap-2.5 sm:gap-3 flex-1 justify-between">
                     <div>
-                      <h3 className="text-xl font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug mb-2">
+                      <h3 className="text-lg sm:text-xl font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug mb-1.5 sm:mb-2">
                         {card.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed mb-4">
+                      <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed mb-3 sm:mb-4">
                         {card.description}
                       </p>
 
                       <ul className="flex flex-col gap-1.5 pt-2 border-t border-glass-border/60">
                         {card.features.map((f, fIdx) => (
                           <li key={fIdx} className="flex items-center gap-2 text-xs font-semibold text-on-surface">
-                            <span className="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+                            <span className="material-symbols-outlined text-primary text-[15px]">check_circle</span>
                             <span>{f}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="pt-4 mt-2 border-t border-glass-border">
+                    <div className="pt-3.5 sm:pt-4 mt-2 border-t border-glass-border">
                       <Link 
                         href={card.href}
-                        className="cursor-pointer text-xs font-extrabold text-primary flex items-center justify-between group-hover:underline"
+                        className="cursor-pointer text-xs font-extrabold text-primary flex items-center justify-between group-hover:underline py-1"
                       >
                         <span>Explore Practice</span>
                         <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -481,7 +481,7 @@ export default function HomePage() {
           </div>
 
           {/* Indicator Dots */}
-          <div className="flex justify-center items-center gap-2 mt-8">
+          <div className="flex justify-center items-center gap-2 mt-6 sm:mt-8">
             {elasticPracticeCards.map((_, idx) => (
               <button
                 key={idx}
@@ -498,59 +498,59 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 3. FEATURED INNOVATION & 3-UP STAGGER GRID ---------------- */}
-      <section className="relative py-24 bg-surface transition-colors duration-500 border-t border-glass-border overflow-hidden">
+      <section className="relative py-14 sm:py-24 bg-surface transition-colors duration-500 border-t border-glass-border overflow-hidden">
         
         {/* Ambient Typographic Watermark */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden flex items-center justify-center z-0 opacity-[0.02] dark:opacity-[0.04] text-[8vw] font-black uppercase tracking-[0.2em] whitespace-nowrap text-on-surface">
           INNOVATION • AI TALENT MAPPING • RETENTION MATRIX
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6 flex flex-col gap-12">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6 flex flex-col gap-8 sm:gap-12">
           
           <div className="text-center max-w-2xl mx-auto">
-            <span className="text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-2">Features & Innovations</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight">
+            <span className="text-[10px] sm:text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-1.5 sm:mb-2">Features & Innovations</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-on-surface tracking-tight leading-snug">
               Explore What's <span className="text-primary">New in HR Advisory</span>
             </h2>
-            <p className="text-sm sm:text-base text-on-surface-variant mt-2">
+            <p className="text-xs sm:text-base text-on-surface-variant mt-1.5 sm:mt-2">
               Discover advanced talent mapping and AI-assisted recruitment workflows built for scale.
             </p>
           </div>
 
           {/* Full-Width Featured Spotlight Card */}
           <div className="glass-card rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-xl border border-glass-border group">
-            <div className="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-between gap-6">
-              <div className="flex flex-col gap-3">
-                <div className="inline-flex items-center gap-2 bg-primary/10 px-3.5 py-1.5 rounded-full border border-glass-border text-primary text-xs font-extrabold uppercase tracking-wider self-start">
-                  <span className="material-symbols-outlined text-[18px]">insights</span>
+            <div className="lg:col-span-6 p-5 sm:p-12 flex flex-col justify-between gap-5 sm:gap-6">
+              <div className="flex flex-col gap-2.5 sm:gap-3">
+                <div className="inline-flex items-center gap-2 bg-primary/10 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-glass-border text-primary text-[10px] sm:text-xs font-extrabold uppercase tracking-wider self-start">
+                  <span className="material-symbols-outlined text-[16px] sm:text-[18px]">insights</span>
                   <span>AI Talent Intelligence 2026</span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-on-surface leading-tight group-hover:text-primary transition-colors">
+                <h3 className="text-xl sm:text-3xl font-extrabold text-on-surface leading-snug group-hover:text-primary transition-colors">
                   Turn Market Talent Signals into Rapid Organizational Impact.
                 </h3>
-                <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed">
+                <p className="text-xs sm:text-base text-on-surface-variant leading-relaxed">
                   Leverage our AI-assisted talent mapping matrix to benchmark compensation, forecast leadership availability, and secure top-tier executive talent with precision.
                 </p>
               </div>
 
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto">
                 <Link
                   href="/services"
-                  className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-xs px-6 py-3.5 rounded-xl shadow-md transition-all flex items-center gap-2"
+                  className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-98"
                 >
                   <span>Learn More</span>
                   <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
                 </Link>
                 <Link
                   href="/contact"
-                  className="cursor-pointer glass-card text-on-surface font-bold text-xs px-6 py-3.5 rounded-xl transition-all"
+                  className="cursor-pointer glass-card text-on-surface font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl transition-all flex items-center justify-center active:scale-98"
                 >
                   Book Discovery Session
                 </Link>
               </div>
             </div>
 
-            <div className="lg:col-span-6 relative min-h-[260px] lg:min-h-full overflow-hidden">
+            <div className="lg:col-span-6 relative min-h-[200px] sm:min-h-[260px] lg:min-h-full overflow-hidden">
               <img 
                 src="https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=1200" 
                 alt="Talent Intelligence" 
@@ -561,10 +561,10 @@ export default function HomePage() {
           </div>
 
           {/* 3-Up Stagger Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="glass-card rounded-3xl p-6 flex flex-col justify-between group shadow-md">
-              <div className="flex flex-col gap-3">
-                <div className="h-44 rounded-2xl overflow-hidden mb-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="glass-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between group shadow-md">
+              <div className="flex flex-col gap-2.5 sm:gap-3">
+                <div className="h-36 sm:h-44 rounded-2xl overflow-hidden mb-1 sm:mb-2">
                   <img 
                     src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800" 
                     alt="Confidential Search"
@@ -572,27 +572,27 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="inline-flex items-center gap-1.5 text-xs font-bold text-primary">
-                  <span className="material-symbols-outlined text-[18px]">lock</span>
+                  <span className="material-symbols-outlined text-[16px] sm:text-[18px]">lock</span>
                   <span>Confidential Headhunting</span>
                 </div>
-                <h4 className="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">
+                <h4 className="text-base sm:text-lg font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
                   Zero-Leak C-Suite Replacements
                 </h4>
                 <p className="text-xs text-on-surface-variant leading-relaxed">
                   Stealth executive searches ensuring zero operational disruption and maximum confidentiality.
                 </p>
               </div>
-              <div className="pt-4 mt-4 border-t border-glass-border">
-                <Link href="/services" className="cursor-pointer text-xs font-bold text-primary flex items-center gap-1 hover:underline">
+              <div className="pt-3.5 sm:pt-4 mt-3 sm:mt-4 border-t border-glass-border">
+                <Link href="/services" className="cursor-pointer text-xs font-bold text-primary flex items-center justify-between group-hover:underline py-1">
                   <span>Explore Search</span>
                   <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </Link>
               </div>
             </div>
 
-            <div className="glass-card rounded-3xl p-6 flex flex-col justify-between group shadow-md">
-              <div className="flex flex-col gap-3">
-                <div className="h-44 rounded-2xl overflow-hidden mb-2">
+            <div className="glass-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between group shadow-md">
+              <div className="flex flex-col gap-2.5 sm:gap-3">
+                <div className="h-36 sm:h-44 rounded-2xl overflow-hidden mb-1 sm:mb-2">
                   <img 
                     src="https://images.pexels.com/photos/3182781/pexels-photo-3182781.jpeg?auto=compress&cs=tinysrgb&w=800" 
                     alt="Sprint Staffing"
@@ -600,27 +600,27 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="inline-flex items-center gap-1.5 text-xs font-bold text-secondary">
-                  <span className="material-symbols-outlined text-[18px]">bolt</span>
+                  <span className="material-symbols-outlined text-[16px] sm:text-[18px]">bolt</span>
                   <span>Sprint Tech Sourcing</span>
                 </div>
-                <h4 className="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">
+                <h4 className="text-base sm:text-lg font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
                   Pre-Vetted Engineering Talent
                 </h4>
                 <p className="text-xs text-on-surface-variant leading-relaxed">
                   Immediate hiring pipelines for React, Next.js, Cloud Infrastructure, and AI teams.
                 </p>
               </div>
-              <div className="pt-4 mt-4 border-t border-glass-border">
-                <Link href="/services" className="cursor-pointer text-xs font-bold text-secondary flex items-center gap-1 hover:underline">
+              <div className="pt-3.5 sm:pt-4 mt-3 sm:mt-4 border-t border-glass-border">
+                <Link href="/services" className="cursor-pointer text-xs font-bold text-secondary flex items-center justify-between group-hover:underline py-1">
                   <span>View Tech Stack</span>
                   <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </Link>
               </div>
             </div>
 
-            <div className="glass-card rounded-3xl p-6 flex flex-col justify-between group shadow-md">
-              <div className="flex flex-col gap-3">
-                <div className="h-44 rounded-2xl overflow-hidden mb-2">
+            <div className="glass-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between group shadow-md">
+              <div className="flex flex-col gap-2.5 sm:gap-3">
+                <div className="h-36 sm:h-44 rounded-2xl overflow-hidden mb-1 sm:mb-2">
                   <img 
                     src="https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=800" 
                     alt="Labor Law Audits"
@@ -628,18 +628,18 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="inline-flex items-center gap-1.5 text-xs font-bold text-tertiary">
-                  <span className="material-symbols-outlined text-[18px]">verified_user</span>
+                  <span className="material-symbols-outlined text-[16px] sm:text-[18px]">verified_user</span>
                   <span>Labor Compliance Audit</span>
                 </div>
-                <h4 className="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">
+                <h4 className="text-base sm:text-lg font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
                   Multi-State Statutory Audit
                 </h4>
                 <p className="text-xs text-on-surface-variant leading-relaxed">
                   Mitigate litigation risk with comprehensive PF/ESI audits, POSH setups, and contract drafting.
                 </p>
               </div>
-              <div className="pt-4 mt-4 border-t border-glass-border">
-                <Link href="/services" className="cursor-pointer text-xs font-bold text-tertiary flex items-center gap-1 hover:underline">
+              <div className="pt-3.5 sm:pt-4 mt-3 sm:mt-4 border-t border-glass-border">
+                <Link href="/services" className="cursor-pointer text-xs font-bold text-tertiary flex items-center justify-between group-hover:underline py-1">
                   <span>Audit Framework</span>
                   <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </Link>
@@ -651,7 +651,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 4. FULL-BLEED TESTIMONIAL SLIDER ---------------- */}
-      <section className="relative py-28 overflow-hidden transition-colors duration-500 text-on-surface">
+      <section className="relative py-16 sm:py-28 overflow-hidden transition-colors duration-500 text-on-surface">
         {/* Full-Bleed Background Images */}
         {testimonials.map((t, idx) => (
           <div
@@ -669,22 +669,22 @@ export default function HomePage() {
           style={{ background: 'var(--hero-overlay)' }}
         />
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6 flex flex-col justify-between min-h-[380px]">
-          <div className="max-w-3xl flex flex-col gap-6 animate-in fade-in duration-500">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6 flex flex-col justify-between min-h-[320px] sm:min-h-[380px]">
+          <div className="max-w-3xl flex flex-col gap-4 sm:gap-6 animate-in fade-in duration-500">
             <div className="flex items-center gap-1 text-amber-500">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className="material-symbols-outlined text-[22px]">star</span>
+                <span key={i} className="material-symbols-outlined text-[18px] sm:text-[22px]">star</span>
               ))}
             </div>
 
-            <blockquote className="text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight text-on-surface">
+            <blockquote className="text-lg sm:text-3xl md:text-4xl font-extrabold leading-snug tracking-tight text-on-surface">
               "{testimonials[activeTestimonial].quote}"
             </blockquote>
 
-            <div className="flex items-center gap-4 pt-2">
+            <div className="flex items-center gap-4 pt-1 sm:pt-2">
               <div>
-                <div className="text-lg font-black text-primary">{testimonials[activeTestimonial].author}</div>
-                <div className="text-xs font-semibold text-on-surface-variant">
+                <div className="text-base sm:text-lg font-black text-primary">{testimonials[activeTestimonial].author}</div>
+                <div className="text-[11px] sm:text-xs font-semibold text-on-surface-variant">
                   {testimonials[activeTestimonial].role} • <span className="text-secondary font-bold">{testimonials[activeTestimonial].company}</span>
                 </div>
               </div>
@@ -692,12 +692,12 @@ export default function HomePage() {
           </div>
 
           {/* Testimonial Switcher Thumbnails */}
-          <div className="flex items-center gap-3 pt-8 mt-6 border-t border-glass-border">
+          <div className="flex items-center gap-2 sm:gap-3 pt-6 sm:pt-8 mt-4 sm:mt-6 border-t border-glass-border overflow-x-auto touch-scroll no-scrollbar">
             {testimonials.map((t, idx) => (
               <button
                 key={t.id}
                 onClick={() => setActiveTestimonial(idx)}
-                className={`cursor-pointer px-4 py-2 rounded-xl text-xs font-bold transition-all border ${
+                className={`cursor-pointer px-3.5 sm:px-4 py-2 rounded-xl text-[11px] sm:text-xs font-bold transition-all border shrink-0 ${
                   idx === activeTestimonial
                     ? 'bg-primary text-on-primary border-primary shadow-md'
                     : 'glass-card text-on-surface-variant hover:text-primary'
@@ -711,43 +711,43 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 5. HOT JOBS BENTO GRID ---------------- */}
-      <section className="relative py-24 bg-surface border-t border-glass-border transition-colors duration-300 overflow-hidden">
+      <section className="relative py-14 sm:py-24 bg-surface border-t border-glass-border transition-colors duration-300 overflow-hidden">
         {/* Ambient Typographic Watermark */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden flex items-center justify-center z-0 opacity-[0.02] dark:opacity-[0.04] text-[9vw] font-black uppercase tracking-[0.2em] whitespace-nowrap text-on-surface">
           ACTIVE MANDATES • VERIFIED OPENINGS • EXECUTIVE HIRING
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-3 sm:gap-4">
             <div>
-              <span className="text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-2">Featured Opportunities</span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface">Hot <span className="text-primary">Jobs</span></h2>
+              <span className="text-[10px] sm:text-xs font-extrabold text-tertiary uppercase tracking-widest block mb-1.5 sm:mb-2">Featured Opportunities</span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-on-surface">Hot <span className="text-primary">Jobs</span></h2>
             </div>
             <Link 
               href="/openings" 
-              className="cursor-pointer text-primary font-bold text-sm flex items-center gap-1.5 hover:underline group"
+              className="cursor-pointer text-primary font-bold text-xs sm:text-sm flex items-center gap-1.5 hover:underline group self-start sm:self-auto py-1"
             >
               <span>View All 25+ Openings</span>
-              <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              <span className="material-symbols-outlined text-[16px] sm:text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
           </div>
 
           {/* Jobs Bento Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {jobs.map((job) => (
               <div 
                 key={job.id} 
-                className="glass-card rounded-3xl p-7 flex flex-col justify-between group relative overflow-hidden shadow-lg"
+                className="glass-card rounded-3xl p-5 sm:p-7 flex flex-col justify-between group relative overflow-hidden shadow-lg"
               >
-                <div className="flex flex-col gap-3.5">
+                <div className="flex flex-col gap-2.5 sm:gap-3.5">
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-[11px] font-bold text-primary px-3 py-1 rounded-full bg-primary/10 border border-glass-border">
+                    <span className="text-[10px] sm:text-[11px] font-bold text-primary px-3 py-1 rounded-full bg-primary/10 border border-glass-border">
                       {job.department}
                     </span>
-                    <span className="text-xs text-on-surface-variant font-semibold">{job.type}</span>
+                    <span className="text-[11px] sm:text-xs text-on-surface-variant font-semibold">{job.type}</span>
                   </div>
 
-                  <h3 className="text-xl font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  <h3 className="text-lg sm:text-xl font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug">
                     {job.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-on-surface-variant line-clamp-3 leading-relaxed">
@@ -755,7 +755,7 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <div className="pt-5 mt-5 border-t border-glass-border flex flex-col gap-3.5">
+                <div className="pt-4 sm:pt-5 mt-4 sm:mt-5 border-t border-glass-border flex flex-col gap-3 sm:gap-3.5">
                   <div className="flex items-center justify-between text-xs text-on-surface-variant font-medium">
                     <span className="flex items-center gap-1">
                       <span className="material-symbols-outlined text-[16px] text-primary">location_on</span>
@@ -766,7 +766,7 @@ export default function HomePage() {
 
                   <button
                     onClick={() => setSelectedJob(job)}
-                    className="cursor-pointer w-full bg-primary hover:bg-primary-fixed-dim text-on-primary text-xs font-bold py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-1.5 active:scale-95"
+                    className="cursor-pointer w-full bg-primary hover:bg-primary-fixed-dim text-on-primary text-xs font-bold py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-1.5 active:scale-98"
                   >
                     <span>Apply Now</span>
                     <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
@@ -779,31 +779,31 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- 6. CTA BANNER SECTION ---------------- */}
-      <section className="relative py-20 bg-surface border-t border-glass-border transition-colors duration-300 overflow-hidden">
+      <section className="relative py-12 sm:py-20 bg-surface border-t border-glass-border transition-colors duration-300 overflow-hidden">
         {/* Ambient Typographic Watermark */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden flex items-center justify-center z-0 opacity-[0.02] dark:opacity-[0.04] text-[8vw] font-black uppercase tracking-[0.25em] whitespace-nowrap text-on-surface">
           CONNECT • CONSULT • SCALE • SUCCEED
         </div>
 
-        <div className="relative z-10 max-w-container-max mx-auto px-6">
+        <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6">
           <div 
-            className="p-10 sm:p-14 rounded-3xl border border-glass-border shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden"
+            className="p-6 sm:p-14 rounded-3xl border border-glass-border shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 relative overflow-hidden"
             style={{ background: 'var(--banner-gradient)' }}
           >
-            <div className="flex flex-col gap-3 text-center md:text-left z-10">
-              <span className="text-xs font-extrabold text-tertiary uppercase tracking-widest">Accelerate Your Talent Growth</span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight">
+            <div className="flex flex-col gap-2.5 sm:gap-3 text-center md:text-left z-10">
+              <span className="text-[10px] sm:text-xs font-extrabold text-tertiary uppercase tracking-widest">Accelerate Your Talent Growth</span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-on-surface tracking-tight leading-snug">
                 Ready to Build Your High-Performance Team?
               </h2>
-              <p className="text-sm sm:text-base text-on-surface-variant max-w-xl">
+              <p className="text-xs sm:text-base text-on-surface-variant max-w-xl">
                 Partner with Abishree HR Consultants for specialized executive mandates, technical staffing, and compliance advisory.
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 z-10">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 z-10 w-full sm:w-auto">
               <Link 
                 href="/contact" 
-                className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-sm px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5"
+                className="cursor-pointer bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-center active:scale-98"
               >
                 Connect with an Advisor
               </Link>

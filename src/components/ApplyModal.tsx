@@ -55,16 +55,19 @@ export default function ApplyModal({ job, onClose }: ApplyModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="bg-surface border border-glass-border rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl p-6 sm:p-8 relative transition-colors duration-300">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/65 backdrop-blur-md animate-in fade-in duration-200">
+      <div className="bg-surface border-t sm:border border-glass-border rounded-t-3xl sm:rounded-3xl w-full max-w-lg max-h-[92vh] sm:max-h-[85vh] flex flex-col shadow-2xl p-5 sm:p-8 relative pb-safe animate-in slide-in-from-bottom-6 sm:zoom-in-95 duration-250 overflow-hidden transition-colors duration-300">
         
+        {/* Mobile drag handle bar */}
+        <div className="w-12 h-1.5 rounded-full bg-on-surface-variant/30 mx-auto mb-2 sm:hidden shrink-0" />
+
         {/* Close Button */}
         <button
           onClick={onClose}
           aria-label="Close dialog"
-          className="absolute top-5 right-5 text-on-surface-variant hover:text-primary p-1.5 rounded-full hover:bg-surface-container transition-colors"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 text-on-surface-variant hover:text-primary p-2 rounded-full hover:bg-surface-container transition-colors z-10"
         >
-          <span className="material-symbols-outlined text-[24px]">close</span>
+          <span className="material-symbols-outlined text-[22px] sm:text-[24px]">close</span>
         </button>
 
         {success ? (
@@ -78,19 +81,19 @@ export default function ApplyModal({ job, onClose }: ApplyModalProps) {
             </p>
             <button
               onClick={onClose}
-              className="mt-4 bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold px-8 py-3 rounded-xl transition-all shadow-md"
+              className="mt-4 bg-primary hover:bg-primary-fixed-dim text-on-primary font-bold px-8 py-3 rounded-xl transition-all shadow-md w-full sm:w-auto"
             >
               Done
             </button>
           </div>
         ) : (
-          <div>
-            <div className="mb-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-glass-border text-primary text-xs font-bold uppercase tracking-wider mb-2">
-                <span className="material-symbols-outlined text-[16px]">work</span>
+          <div className="overflow-y-auto pr-1 touch-scroll flex-1">
+            <div className="mb-5 pr-8">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-glass-border text-primary text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2">
+                <span className="material-symbols-outlined text-[15px]">work</span>
                 <span>Direct Application</span>
               </div>
-              <h3 className="text-2xl font-extrabold text-on-surface">{job.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-on-surface leading-tight">{job.title}</h3>
               <p className="text-xs text-on-surface-variant mt-1 font-medium">{job.department} • {job.location}</p>
             </div>
 
@@ -101,58 +104,58 @@ export default function ApplyModal({ job, onClose }: ApplyModalProps) {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3.5 pb-2">
               <div>
-                <label className="block text-xs font-bold text-on-surface-variant mb-1.5">Full Name *</label>
+                <label className="block text-xs font-bold text-on-surface-variant mb-1">Full Name *</label>
                 <input
                   type="text"
                   required
                   value={applicantName}
                   onChange={(e) => setApplicantName(e.target.value)}
                   placeholder="e.g. Rahul Sharma"
-                  className="w-full bg-surface-container border border-glass-border rounded-xl px-4 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-all"
+                  className="w-full bg-surface-container border border-glass-border rounded-xl px-3.5 py-3 sm:py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-all"
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-xs font-bold text-on-surface-variant mb-1.5">Email Address *</label>
+                  <label className="block text-xs font-bold text-on-surface-variant mb-1">Email Address *</label>
                   <input
                     type="email"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="rahul@example.com"
-                    className="w-full bg-surface-container border border-glass-border rounded-xl px-4 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-all"
+                    className="w-full bg-surface-container border border-glass-border rounded-xl px-3.5 py-3 sm:py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-on-surface-variant mb-1.5">Phone Number *</label>
+                  <label className="block text-xs font-bold text-on-surface-variant mb-1">Phone Number *</label>
                   <input
                     type="tel"
                     required
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="+91 98765 43210"
-                    className="w-full bg-surface-container border border-glass-border rounded-xl px-4 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-all"
+                    className="w-full bg-surface-container border border-glass-border rounded-xl px-3.5 py-3 sm:py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-on-surface-variant mb-1.5">Total Experience (Years) *</label>
+                <label className="block text-xs font-bold text-on-surface-variant mb-1">Total Experience (Years) *</label>
                 <input
                   type="text"
                   required
                   value={experience}
                   onChange={(e) => setExperience(e.target.value)}
                   placeholder="e.g. 5 Years"
-                  className="w-full bg-surface-container border border-glass-border rounded-xl px-4 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-all"
+                  className="w-full bg-surface-container border border-glass-border rounded-xl px-3.5 py-3 sm:py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-all"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-on-surface-variant mb-1.5">Upload Resume (PDF/Doc)</label>
+                <label className="block text-xs font-bold text-on-surface-variant mb-1">Upload Resume (PDF/Doc)</label>
                 <input
                   type="file"
                   accept=".pdf,.doc,.docx"
@@ -162,13 +165,13 @@ export default function ApplyModal({ job, onClose }: ApplyModalProps) {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-on-surface-variant mb-1.5">Cover Note / Key Highlights</label>
+                <label className="block text-xs font-bold text-on-surface-variant mb-1">Cover Note / Key Highlights</label>
                 <textarea
                   rows={3}
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   placeholder="Briefly state your core expertise..."
-                  className="w-full bg-surface-container border border-glass-border rounded-xl px-4 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-all"
+                  className="w-full bg-surface-container border border-glass-border rounded-xl px-3.5 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-all"
                 />
               </div>
 
