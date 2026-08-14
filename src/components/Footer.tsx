@@ -66,12 +66,6 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/clients" className="hover:text-primary transition-colors flex items-center gap-1.5">
-                <span className="material-symbols-outlined text-[16px] text-primary">chevron_right</span> 
-                <span>Client Case Studies</span>
-              </Link>
-            </li>
-            <li>
               <Link href="/openings" className="hover:text-primary transition-colors flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-[16px] text-primary">chevron_right</span> 
                 <span>Career Opportunities</span>

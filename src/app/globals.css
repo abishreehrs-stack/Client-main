@@ -29,18 +29,18 @@
   --palette-mint: #BBF1D2;
 
   --background: #fbfdf9;
-  --on-background: #18231c;
+  --on-background: #151d18;
   --surface: #ffffff;
-  --on-surface: #18231c;
-  --on-surface-variant: #435147;
-  --surface-dim: #eef3eb;
+  --on-surface: #151d18;
+  --on-surface-variant: #3e4e43;
+  --surface-dim: #edf3ec;
   --surface-bright: #ffffff;
-  --surface-variant: #e1ede3;
+  --surface-variant: #dceae0;
   --surface-container-lowest: #ffffff;
-  --surface-container-low: #f5f9f4;
-  --surface-container: #ebf5ee;
-  --surface-container-high: #e2efe6;
-  --surface-container-highest: #d6e8dc;
+  --surface-container-low: #f4f8f3;
+  --surface-container: #eaf3ed;
+  --surface-container-high: #dfeee4;
+  --surface-container-highest: #d3e7da;
   
   --primary: #12634a;
   --primary-container: #BBF1D2;
@@ -97,19 +97,19 @@
   --palette-lime: #abeef2;
   --palette-mint: #8fd2d6;
 
-  --background: #111414;
-  --on-background: #e1e3e3;
-  --surface: #111414;
-  --on-surface: #e1e3e3;
-  --on-surface-variant: #bfc8c9;
-  --surface-dim: #111414;
-  --surface-bright: #363a3a;
-  --surface-variant: #323535;
-  --surface-container-lowest: #0b0f0f;
-  --surface-container-low: #191c1c;
-  --surface-container: #1d2020;
-  --surface-container-high: #272b2b;
-  --surface-container-highest: #323535;
+  --background: #0d1213;
+  --on-background: #f1f5f5;
+  --surface: #111718;
+  --on-surface: #f1f5f5;
+  --on-surface-variant: #b0bebe;
+  --surface-dim: #0d1213;
+  --surface-bright: #2d3839;
+  --surface-variant: #222c2d;
+  --surface-container-lowest: #090e0e;
+  --surface-container-low: #141b1c;
+  --surface-container: #1b2324;
+  --surface-container-high: #232d2f;
+  --surface-container-highest: #2c383a;
   
   --primary: #8fd2d6;
   --primary-container: #105e62;
@@ -135,29 +135,29 @@
   --quaternary: #abeef2;
   --quaternary-container: #105e62;
   
-  --outline: #899393;
-  --outline-variant: #3f4849;
+  --outline: #8c9898;
+  --outline-variant: #3a4545;
   
-  --bg-midnight: #041617;
-  --bg-deep-teal: #082E30;
+  --bg-midnight: #05181a;
+  --bg-deep-teal: #0c3336;
   
-  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.14);
   --glass-border-light: rgba(255, 255, 255, 0.08);
-  --glass-fill-dark: rgba(0, 0, 0, 0.35);
-  --glass-fill-light: rgba(255, 255, 255, 0.12);
-  --glass-nav: rgba(4, 22, 23, 0.90);
-  --card-bg: rgba(39, 43, 43, 0.55);
-  --card-border: rgba(255, 255, 255, 0.12);
-  --card-hover-bg: rgba(39, 43, 43, 0.85);
-  --hero-overlay: linear-gradient(to right, rgba(4, 22, 23, 0.96) 0%, rgba(4, 22, 23, 0.86) 55%, rgba(4, 22, 23, 0.6) 100%);
-  --section-gradient-1: linear-gradient(180deg, #041617 0%, #082E30 100%);
-  --section-gradient-2: linear-gradient(180deg, #082E30 0%, #041617 100%);
-  --banner-gradient: linear-gradient(135deg, #041617 0%, #082E30 50%, #041617 100%);
-  --glow-accent: rgba(143, 210, 214, 0.08);
-  --sidebar-bg: rgba(8, 46, 48, 0.75);
-  --sidebar-border: rgba(255, 255, 255, 0.12);
-  --table-header: rgba(39, 43, 43, 0.6);
-  --table-hover: rgba(39, 43, 43, 0.3);
+  --glass-fill-dark: rgba(0, 0, 0, 0.45);
+  --glass-fill-light: rgba(255, 255, 255, 0.08);
+  --glass-nav: rgba(5, 24, 26, 0.92);
+  --card-bg: rgba(20, 27, 28, 0.75);
+  --card-border: rgba(255, 255, 255, 0.14);
+  --card-hover-bg: rgba(27, 36, 37, 0.92);
+  --hero-overlay: linear-gradient(to right, rgba(5, 24, 26, 0.96) 0%, rgba(5, 24, 26, 0.88) 55%, rgba(5, 24, 26, 0.65) 100%);
+  --section-gradient-1: linear-gradient(180deg, #05181a 0%, #0c3336 100%);
+  --section-gradient-2: linear-gradient(180deg, #0c3336 0%, #05181a 100%);
+  --banner-gradient: linear-gradient(135deg, #05181a 0%, #0c3336 50%, #05181a 100%);
+  --glow-accent: rgba(143, 210, 214, 0.12);
+  --sidebar-bg: rgba(12, 51, 54, 0.85);
+  --sidebar-border: rgba(255, 255, 255, 0.14);
+  --table-header: rgba(26, 35, 36, 0.8);
+  --table-hover: rgba(143, 210, 214, 0.08);
 }
 
 @layer base {
@@ -171,6 +171,33 @@
     background-color: var(--background);
     color: var(--on-surface);
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Universal Input, Textarea, Select Contrast & Styling */
+  input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]),
+  select,
+  textarea {
+    background-color: var(--surface-container);
+    color: var(--on-surface);
+    border-color: var(--glass-border);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--on-surface-variant);
+    opacity: 0.65;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+
+  select option {
+    background-color: var(--surface-container-high);
+    color: var(--on-surface);
   }
 }
 

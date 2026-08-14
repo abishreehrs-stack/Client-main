@@ -807,12 +807,6 @@ export default function HomePage() {
               >
                 Connect with an Advisor
               </Link>
-              <Link 
-                href="/clients" 
-                className="cursor-pointer glass-card text-on-surface hover:text-primary font-bold text-sm px-7 py-4 rounded-xl transition-all"
-              >
-                Our Partnerships
-              </Link>
             </div>
           </div>
         </div>
