@@ -20,19 +20,39 @@ export default function ApplyModal({ job, onClose }: ApplyModalProps) {
   const [success, setSuccess] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
+  const readFileAsBase64 = (file: File): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = (error) => reject(error);
+      reader.readAsDataURL(file);
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setErrorMsg('');
 
     try {
+      let resumeData = '';
+      if (resumeFile) {
+        try {
+          resumeData = await readFileAsBase64(resumeFile);
+        } catch (err) {
+          console.warn('Could not read resume as base64', err);
+        }
+      }
+
       const payload = {
         applicantName,
         email,
         phone,
         experience,
         notes,
-        resumeFileName: resumeFile ? resumeFile.name : '',
+        resumeFileName: resumeFile ? resumeFile.name : 'Uploaded_Resume.pdf',
+        resumeName: resumeFile ? resumeFile.name : 'Uploaded_Resume.pdf',
+        resumeData,
         jobTitle: job.title
       };
 
