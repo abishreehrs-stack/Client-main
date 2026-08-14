@@ -143,6 +143,19 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+              
+              <Link
+                href="/clients"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`flex items-center gap-3 text-sm font-bold py-3 px-4 rounded-xl transition-all ${
+                  pathname === '/clients'
+                    ? 'bg-primary text-on-primary shadow-md' 
+                    : 'text-on-surface-variant hover:text-primary hover:bg-surface-container'
+                }`}
+              >
+                <span className="material-symbols-outlined text-[20px]">handshake</span>
+                <span>Clients & Partners</span>
+              </Link>
             </div>
 
             {/* Quick Contact & Action Buttons */}
@@ -158,7 +171,7 @@ export default function Navbar() {
 
               <div className="grid grid-cols-2 gap-2 pt-1">
                 <a
-                  href="tel:+919876500112"
+                  href="tel:+918049201100"
                   className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-xs font-bold text-primary border border-glass-border shadow-sm"
                 >
                   <span className="material-symbols-outlined text-[16px]">call</span>
@@ -185,6 +198,35 @@ export default function Navbar() {
           className="fixed inset-0 bg-black/40 backdrop-blur-xs z-40 md:hidden"
         />
       )}
+
+      {/* ---------------- FLOATING BOTTOM DOCK FOR MOBILE NAVIGATION ---------------- */}
+      <div className="md:hidden fixed bottom-3 left-3 right-3 z-40">
+        <nav className="bg-surface-container-high/95 backdrop-blur-2xl border border-glass-border shadow-2xl rounded-2xl p-1.5 flex items-center justify-around gap-1">
+          {[
+            { label: 'Home', href: '/', icon: 'home' },
+            { label: 'Services', href: '/services', icon: 'psychology' },
+            { label: 'Careers', href: '/openings', icon: 'work' },
+            { label: 'Clients', href: '/clients', icon: 'handshake' },
+            { label: 'Contact', href: '/contact', icon: 'support_agent' },
+          ].map((dock) => {
+            const isActive = pathname === dock.href;
+            return (
+              <Link
+                key={dock.href}
+                href={dock.href}
+                className={`cursor-pointer flex flex-col items-center justify-center py-1.5 px-2 rounded-xl transition-all flex-1 ${
+                  isActive
+                    ? 'bg-primary text-on-primary shadow-md scale-102 font-extrabold'
+                    : 'text-on-surface-variant hover:text-primary active:scale-95 font-medium'
+                }`}
+              >
+                <span className="material-symbols-outlined text-[20px] mb-0.5">{dock.icon}</span>
+                <span className="text-[10px] tracking-tight">{dock.label}</span>
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
     </>
   );
 }
