@@ -1,14 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
+import { API_BASE } from '@/config/api';
 
 interface ApplyModalProps {
-  job: {
-    id: string;
-    title: string;
-    department: string;
-    location: string;
-  };
+  job: any;
   onClose: () => void;
 }
 
@@ -30,19 +26,20 @@ export default function ApplyModal({ job, onClose }: ApplyModalProps) {
     setErrorMsg('');
 
     try {
-      const formData = new FormData();
-      formData.append('applicantName', applicantName);
-      formData.append('email', email);
-      formData.append('phone', phone);
-      formData.append('experience', experience);
-      formData.append('notes', notes);
-      if (resumeFile) {
-        formData.append('resume', resumeFile);
-      }
+      const payload = {
+        applicantName,
+        email,
+        phone,
+        experience,
+        notes,
+        resumeFileName: resumeFile ? resumeFile.name : '',
+        jobTitle: job.title
+      };
 
-      const res = await fetch(`http://localhost:5000/api/jobs/${job.id}/apply`, {
+      const res = await fetch(`${API_BASE}/api/jobs/${job.id}/apply`, {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok) {

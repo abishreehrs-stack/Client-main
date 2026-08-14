@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
+import { API_BASE } from '@/config/api';
 
 export default function ContactPage() {
   const [serviceInterest, setServiceInterest] = useState('Executive Search & Leadership Hiring');
@@ -59,7 +61,7 @@ export default function ContactPage() {
         message,
       };
 
-      const res = await fetch('http://localhost:5000/api/inquiries', {
+      const res = await fetch(`${API_BASE}/api/inquiries`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

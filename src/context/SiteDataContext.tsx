@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
+import { API_BASE } from '@/config/api';
 
 interface SiteData {
   jobs: any[];
@@ -34,7 +35,7 @@ export function SiteDataProvider({ children }: { children: React.ReactNode }) {
     setLoading(true);
     setError(null);
 
-    fetch('http://localhost:5000/api/site-data')
+    fetch(`${API_BASE}/api/site-data`)
       .then(res => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
