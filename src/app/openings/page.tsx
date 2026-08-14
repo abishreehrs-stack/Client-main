@@ -362,7 +362,7 @@ export default function OpeningsPage() {
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
                 <span className="material-symbols-outlined text-[20px] sm:text-[24px]">lock</span>
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-on-surface">100% Confidentiality</h3>
+              <h3 className="text-base sm:text-lg font-bold text-on-surface">Absolute Confidentiality</h3>
               <p className="text-xs text-on-surface-variant leading-relaxed">
                 Your resume and identity are guarded under strict NDAs. We never share your profile without your express prior consent.
               </p>

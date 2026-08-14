@@ -25,7 +25,7 @@ export default function ServicesPage() {
       tagline: 'Securing Transformative Leadership for High-Growth Enterprises',
       description: 'Discreet, retained executive search combining global market intelligence, competitor talent mapping, and rigorous leadership psychometric assessments to place CXOs, VPs, and Board Members.',
       timeline: '21-35 Business Days',
-      retentionRate: '98.4%',
+      retentionRate: 'High-Yield Retention',
       image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200',
       deliverables: [
         'Confidential C-Suite Mandates & Board Succession',
@@ -42,7 +42,7 @@ export default function ServicesPage() {
       tagline: 'High-Velocity Technical Recruitment for Digital Transformations',
       description: 'Rapid deployment of pre-screened software architects, backend engineers, ML/AI practitioners, and DevOps leads vetted for technical depth and cultural synergy.',
       timeline: '7-14 Business Days',
-      retentionRate: '94.2%',
+      retentionRate: 'Rapid Velocity SLA',
       image: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200',
       deliverables: [
         'Hands-on Code Assessment & Tech Screening',
@@ -59,7 +59,7 @@ export default function ServicesPage() {
       tagline: '100% Risk Mitigation & Regulatory Alignment across Indian States',
       description: 'End-to-end statutory audits ensuring full compliance with the New Indian Labor Codes, PF/ESI regulations, Factories Act, POSH mandates, and state-specific Shops & Establishment laws.',
       timeline: 'Ongoing or 10-Day Audit',
-      retentionRate: '100% Risk-Free',
+      retentionRate: 'Zero Statutory Risk',
       image: 'https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1200',
       deliverables: [
         'Comprehensive Statutory HR Health Audits',
@@ -76,7 +76,7 @@ export default function ServicesPage() {
       tagline: 'Strategic Workforce Architecture for High-Growth Ventures',
       description: 'Comprehensive market intelligence, competency matrix design, executive talent pipelining, and structured organizational succession roadmaps for scalable corporate growth.',
       timeline: '14-21 Business Days',
-      retentionRate: '99.2% Accuracy',
+      retentionRate: 'High-Precision Mapping',
       image: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1200',
       deliverables: [
         'Executive Competency & Benchmark Mapping',
@@ -93,7 +93,7 @@ export default function ServicesPage() {
       tagline: 'Protected Headhunting for Sensitive Operational Transitions',
       description: 'Ultra-confidential talent sourcing for roles where public market signaling would create operational vulnerability or market speculation.',
       timeline: 'Custom Confidential SLA',
-      retentionRate: '100% Discretion',
+      retentionRate: 'Absolute Discretion',
       image: 'https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1200',
       deliverables: [
         'Strict NDA-Enforced Candidate Approach',
@@ -108,15 +108,15 @@ export default function ServicesPage() {
       title: 'HR Infrastructure & Policy Design',
       icon: 'tune',
       tagline: 'Building Scalable People Operations for Growing Ventures',
-      description: 'From compensation banding and performance appraisal frameworks to leave policies and standard operating procedures (SOPs), we architect modern HR ecosystems.',
-      timeline: '14-28 Business Days',
-      retentionRate: 'Scalable to 5000+',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      description: 'Complete HR blueprints covering performance appraisal frameworks, grading structures, HRMS onboarding pipelines, and custom enterprise employee handbooks.',
+      timeline: '14-30 Business Days',
+      retentionRate: 'Institutional Standard',
+      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200',
       deliverables: [
-        'Job Leveling & Compensation Benchmarking',
-        'OKRs & Performance Management Frameworks',
-        'Standardized Onboarding & Exit Protocols',
-        'HRMS Software Selection & Implementation'
+        'Corporate HR Policy Formulation',
+        'Performance Management Frameworks (OKRs/KPIs)',
+        'Salary Banding & Compensation Structuring',
+        'HRMS Setup & Onboarding Standard Operating Procedures'
       ]
     }
   ];
@@ -207,21 +207,29 @@ export default function ServicesPage() {
 
           {/* Key Metrics Row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 w-full max-w-4xl">
-            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
-              <div className="text-xl sm:text-3xl font-black text-primary mb-0.5 sm:mb-1">98.4%</div>
-              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Placement Retention</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md border border-glass-border">
+              <div className="text-xs sm:text-sm font-black text-primary uppercase tracking-wider mb-1 bg-primary/10 py-1 px-2 rounded-lg border border-primary/20">
+                HIGH-YIELD
+              </div>
+              <div className="text-[10px] sm:text-xs text-on-surface font-bold">Placement Retention</div>
             </div>
-            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
-              <div className="text-xl sm:text-3xl font-black text-secondary mb-0.5 sm:mb-1">14 Days</div>
-              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Avg Sourcing Speed</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md border border-glass-border">
+              <div className="text-xs sm:text-sm font-black text-secondary uppercase tracking-wider mb-1 bg-secondary/10 py-1 px-2 rounded-lg border border-secondary/20">
+                RAPID SLA
+              </div>
+              <div className="text-[10px] sm:text-xs text-on-surface font-bold">Sprint Sourcing Speed</div>
             </div>
-            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
-              <div className="text-xl sm:text-3xl font-black text-tertiary mb-0.5 sm:mb-1">100%</div>
-              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Statutory Safety</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md border border-glass-border">
+              <div className="text-xs sm:text-sm font-black text-tertiary uppercase tracking-wider mb-1 bg-tertiary/10 py-1 px-2 rounded-lg border border-tertiary/20">
+                ZERO RISK
+              </div>
+              <div className="text-[10px] sm:text-xs text-on-surface font-bold">Labor Compliance Safety</div>
             </div>
-            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
-              <div className="text-xl sm:text-3xl font-black text-quaternary mb-0.5 sm:mb-1">500+</div>
-              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Retained Mandates</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md border border-glass-border">
+              <div className="text-xs sm:text-sm font-black text-primary uppercase tracking-wider mb-1 bg-primary/10 py-1 px-2 rounded-lg border border-primary/20">
+                PROVEN SCALE
+              </div>
+              <div className="text-[10px] sm:text-xs text-on-surface font-bold">Retained CXO Mandates</div>
             </div>
           </div>
 

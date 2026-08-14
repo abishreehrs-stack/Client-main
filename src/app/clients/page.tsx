@@ -201,7 +201,7 @@ export default function ClientsPage() {
           </div>
 
           <h1 className="text-2xl sm:text-4xl md:text-6xl font-extrabold text-on-surface tracking-tight max-w-4xl leading-[1.18] sm:leading-[1.15] mb-4 sm:mb-6">
-            Trusted by Industry Leaders Across <span className="text-primary">18+ Sectors</span>
+            Trusted by Industry Leaders Across <span className="text-primary">Diverse Enterprise Sectors</span>
           </h1>
 
           <p className="text-xs sm:text-base md:text-lg text-on-surface-variant max-w-2xl leading-relaxed mb-8 sm:mb-10">
@@ -210,21 +210,29 @@ export default function ClientsPage() {
 
           {/* Stats Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 w-full max-w-4xl">
-            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
-              <div className="text-xl sm:text-3xl font-black text-primary mb-0.5 sm:mb-1">250+</div>
-              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Corporate Clients</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md border border-glass-border">
+              <div className="text-xs sm:text-sm font-black text-primary uppercase tracking-wider mb-1 bg-primary/10 py-1 px-2 rounded-lg border border-primary/20">
+                ENTERPRISE
+              </div>
+              <div className="text-[10px] sm:text-xs text-on-surface font-bold">Tier-1 Corporate Network</div>
             </div>
-            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
-              <div className="text-xl sm:text-3xl font-black text-secondary mb-0.5 sm:mb-1">10,000+</div>
-              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Talent Placed</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md border border-glass-border">
+              <div className="text-xs sm:text-sm font-black text-secondary uppercase tracking-wider mb-1 bg-secondary/10 py-1 px-2 rounded-lg border border-secondary/20">
+                CURATED
+              </div>
+              <div className="text-[10px] sm:text-xs text-on-surface font-bold">Pre-Vetted Placements</div>
             </div>
-            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
-              <div className="text-xl sm:text-3xl font-black text-tertiary mb-0.5 sm:mb-1">98.4%</div>
-              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Client Retention</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md border border-glass-border">
+              <div className="text-xs sm:text-sm font-black text-tertiary uppercase tracking-wider mb-1 bg-tertiary/10 py-1 px-2 rounded-lg border border-tertiary/20">
+                HIGH-YIELD
+              </div>
+              <div className="text-[10px] sm:text-xs text-on-surface font-bold">Client Retention Benchmark</div>
             </div>
-            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md">
-              <div className="text-xl sm:text-3xl font-black text-quaternary mb-0.5 sm:mb-1">18+</div>
-              <div className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">Industry Verticals</div>
+            <div className="glass-card rounded-2xl p-3.5 sm:p-5 text-center shadow-md border border-glass-border">
+              <div className="text-xs sm:text-sm font-black text-primary uppercase tracking-wider mb-1 bg-primary/10 py-1 px-2 rounded-lg border border-primary/20">
+                PAN-INDIA
+              </div>
+              <div className="text-[10px] sm:text-xs text-on-surface font-bold">Multi-Sector Coverage</div>
             </div>
           </div>
 

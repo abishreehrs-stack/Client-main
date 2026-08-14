@@ -93,7 +93,7 @@ export default function ContactPage() {
 
         {/* Ambient Typographic Watermark */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden flex items-center justify-center z-0 opacity-[0.03] dark:opacity-[0.06] text-[8.5vw] font-black uppercase tracking-[0.25em] whitespace-nowrap text-on-surface">
-          CONSULTATION DESK • 4-HOUR SLA • DIRECT PARTNER ASSIGNMENT
+          CONSULTATION DESK • RAPID SLA • DIRECT PARTNER ASSIGNMENT
         </div>
 
         <div className="relative z-10 max-w-container-max mx-auto px-4 sm:px-6 flex flex-col items-center">
@@ -110,12 +110,12 @@ export default function ContactPage() {
           </h1>
 
           <p className="text-xs sm:text-base md:text-lg text-on-surface-variant max-w-2xl leading-relaxed mb-6">
-            Discuss executive talent requirements, book a statutory labor audit, or architect an enterprise talent pipeline. Our senior partners respond within 4 business hours.
+            Discuss executive talent requirements, book a statutory labor audit, or architect an enterprise talent pipeline. Our senior practice partners provide priority turnaround and actionable counsel.
           </p>
 
-          <div className="inline-flex items-center gap-2.5 sm:gap-3 glass-card px-4 py-2 sm:px-5 sm:py-2.5 rounded-2xl shadow-sm">
+          <div className="inline-flex items-center gap-2.5 sm:gap-3 glass-card px-4 py-2 sm:px-5 sm:py-2.5 rounded-2xl shadow-sm border border-glass-border">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-            <span className="text-[11px] sm:text-xs font-extrabold text-on-surface">Consultation SLA: Priority Response in &lt;4 Hours</span>
+            <span className="text-[11px] sm:text-xs font-extrabold text-on-surface">Priority Executive Consultation SLA • Rapid Partner Callback</span>
           </div>
 
         </div>

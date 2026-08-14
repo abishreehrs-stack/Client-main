@@ -33,7 +33,7 @@ export default function Footer() {
               <span className="material-symbols-outlined text-[18px]">mail</span>
             </a>
             <a 
-              href="tel:+919876500112" 
+              href="tel:+918049201100" 
               aria-label="Call Advisory Desk" 
               className="w-10 h-10 rounded-xl bg-surface-container hover:bg-primary hover:text-on-primary border border-glass-border flex items-center justify-center text-primary transition-all shadow-sm active:scale-95"
             >

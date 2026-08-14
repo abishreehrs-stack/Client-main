@@ -68,8 +68,8 @@ export default function HomePage() {
       headline: 'Securing Visionary Leadership. Driving Scalable Growth.',
       description: 'We connect Fortune 500 enterprises and hyper-growth ventures with transformative C-suite leaders who possess the strategic acumen to lead modern markets.',
       image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      badgeNum: '98.4%',
-      badgeLabel: 'Executive Placement Retention',
+      badgeNum: 'HIGH-YIELD',
+      badgeLabel: 'Executive Placement Retention & Tenure Guarantee',
       primaryCtaText: 'Explore Executive Search',
       primaryCtaHref: '/services',
       secondaryCtaText: 'View Leadership Roles',
@@ -83,8 +83,8 @@ export default function HomePage() {
       headline: 'Scale High-Impact Tech Teams. Faster than Ever.',
       description: 'Rapid, vetted candidate delivery across Fullstack, Cloud Architecture, AI/ML, and DevOps. Build resilient engineering organizations with pre-screened talent.',
       image: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      badgeNum: '14 Days',
-      badgeLabel: 'Average Time-to-Offer',
+      badgeNum: 'RAPID SLA',
+      badgeLabel: 'Accelerated Tech Sourcing & Offer Velocity',
       primaryCtaText: 'Explore Tech Staffing',
       primaryCtaHref: '/services',
       secondaryCtaText: 'Browse Tech Openings',
@@ -98,8 +98,8 @@ export default function HomePage() {
       headline: '100% Risk-Free Operations. Complete Statutory Audits.',
       description: 'Navigate Indian labor laws, POSH frameworks, statutory PF/ESI audits, and custom employee handbooks with seasoned corporate HR counsel.',
       image: 'https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      badgeNum: '100%',
-      badgeLabel: 'Statutory Compliance Rating',
+      badgeNum: 'ZERO RISK',
+      badgeLabel: 'Statutory Labor & POSH Compliance Cleared',
       primaryCtaText: 'Request Compliance Audit',
       primaryCtaHref: '/contact',
       secondaryCtaText: 'Our Advisory Scope',
@@ -113,8 +113,8 @@ export default function HomePage() {
       headline: 'Strategic Talent Architecture. Built for Hyper-Growth.',
       description: 'Competency mapping, compensation benchmarking, performance management frameworks, and leadership succession planning tailored for ambitious enterprises.',
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      badgeNum: '500+',
-      badgeLabel: 'Leadership Mandates Delivered',
+      badgeNum: 'PROVEN CXO',
+      badgeLabel: 'High-Impact Strategic Leadership Mandates',
       primaryCtaText: 'Explore HR Strategy',
       primaryCtaHref: '/services',
       secondaryCtaText: 'Book Strategy Session',
@@ -128,8 +128,8 @@ export default function HomePage() {
       headline: 'Step Into Your Next Big Role. Accelerate Your Career.',
       description: 'Discover verified openings across top Technology, Finance, Supply Chain, and Healthcare leaders with personalized placement advisory.',
       image: 'https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      badgeNum: '10,000+',
-      badgeLabel: 'Careers Transformed',
+      badgeNum: 'TIER-1 TALENT',
+      badgeLabel: 'Curated Ecosystem of Pre-Screened Professionals',
       primaryCtaText: 'View Hot Openings',
       primaryCtaHref: '/openings',
       secondaryCtaText: 'Submit Your Resume',
@@ -322,9 +322,13 @@ export default function HomePage() {
             </div>
 
             {/* Floating Impact Metric Chip */}
-            <div className="inline-flex items-center gap-2.5 sm:gap-3 glass-card px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-2xl shadow-sm mt-1 sm:mt-2">
-              <span className="text-lg sm:text-xl font-black text-primary">{currentHero.badgeNum}</span>
-              <span className="text-[10px] sm:text-xs text-on-surface-variant font-bold uppercase tracking-wider">{currentHero.badgeLabel}</span>
+            <div className="inline-flex items-center gap-2 sm:gap-3 glass-card px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl shadow-md mt-1 sm:mt-2 border border-glass-border">
+              <span className="text-[10px] sm:text-xs font-black text-primary bg-primary/10 px-2.5 py-1 rounded-lg border border-primary/30 tracking-wider shrink-0 uppercase">
+                {currentHero.badgeNum}
+              </span>
+              <span className="text-[11px] sm:text-xs text-on-surface font-bold tracking-tight">
+                {currentHero.badgeLabel}
+              </span>
             </div>
 
           </div>

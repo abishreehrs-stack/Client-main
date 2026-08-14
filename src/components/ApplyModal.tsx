@@ -175,11 +175,26 @@ export default function ApplyModal({ job, onClose }: ApplyModalProps) {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-on-surface-variant mb-1">Upload Resume (PDF/Doc)</label>
+                <div className="flex items-center justify-between mb-1">
+                  <label className="block text-xs font-bold text-on-surface-variant">Upload Resume (PDF/DOC)</label>
+                  <span className="text-[10px] text-on-surface-variant font-medium">Max 5MB</span>
+                </div>
                 <input
                   type="file"
                   accept=".pdf,.doc,.docx"
-                  onChange={(e) => e.target.files && setResumeFile(e.target.files[0])}
+                  onChange={(e) => {
+                    if (e.target.files && e.target.files[0]) {
+                      const file = e.target.files[0];
+                      if (file.size > 5 * 1024 * 1024) {
+                        setErrorMsg('File size exceeds 5MB limit. Please upload a smaller PDF or Word document.');
+                        e.target.value = '';
+                        setResumeFile(null);
+                        return;
+                      }
+                      setErrorMsg('');
+                      setResumeFile(file);
+                    }
+                  }}
                   className="w-full text-xs text-on-surface-variant file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-primary file:text-on-primary hover:file:opacity-90 file:cursor-pointer cursor-pointer"
                 />
               </div>
